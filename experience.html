@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Experience | The Mindset Line</title>
-  <meta name="description" content="Three scenarios. Two choices each. Discover whether you operate above or below the line.">
+  <meta name="description" content="Five real scenarios. A slider between Ownership and Blame. See where your gravity pulls you.">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
@@ -39,17 +39,19 @@
   </div>
 
   <main>
-    <section class="section section--hero container" id="experienceContainer">
+    <section class="section section--hero container" id="experienceContainer" style="position: relative; z-index: 2;">
 
       <div class="progress" id="progress" aria-label="Assessment progress">
         <div class="progress__dot active" data-step="0"></div>
         <div class="progress__dot" data-step="1"></div>
         <div class="progress__dot" data-step="2"></div>
+        <div class="progress__dot" data-step="3"></div>
+        <div class="progress__dot" data-step="4"></div>
       </div>
 
-      <div id="scenarioArea">
-        <!-- Scenarios injected by JS -->
-      </div>
+      <div class="the-line" aria-hidden="true" style="margin: var(--space-sm) auto var(--space-md);"></div>
+
+      <div id="scenarioArea"></div>
 
     </section>
   </main>

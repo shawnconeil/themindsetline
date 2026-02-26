@@ -277,3 +277,160 @@
   color: var(--fog-light);
   letter-spacing: 0.1em;
 }
+
+/* Slider */
+.slider-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.slider-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slider-label--below { text-align: left; }
+.slider-label--above { text-align: right; }
+
+.slider-label__tag {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.slider-label--below .slider-label__tag { color: var(--gray); }
+.slider-label--above .slider-label__tag { color: var(--platinum); }
+
+.slider-label__direction {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.slider-label--below .slider-label__direction { color: var(--fog-light); }
+.slider-label--above .slider-label__direction { color: var(--fog-light); }
+
+.slider-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  margin-bottom: var(--space-lg);
+}
+
+.mindset-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--fog);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.mindset-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--platinum);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--platinum-glow);
+  transition: box-shadow 0.2s ease;
+}
+
+.mindset-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 20px var(--platinum-glow), 0 0 30px rgba(229, 228, 226, 0.3);
+}
+
+.mindset-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--platinum);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--platinum-glow);
+}
+
+.slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--fog) 0%, var(--platinum) 100%);
+  pointer-events: none;
+  z-index: 1;
+  transition: width 0.05s linear;
+}
+
+.slider-responses {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.slider-response {
+  flex: 1;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  transition: opacity var(--transition-base);
+  max-width: 280px;
+}
+
+.slider-response--below {
+  text-align: left;
+  color: var(--gray);
+  font-style: italic;
+}
+
+.slider-response--above {
+  text-align: right;
+  color: var(--platinum);
+  font-style: italic;
+}
+
+/* Altitude Meter */
+.altitude-meter {
+  width: 100%;
+  max-width: 500px;
+  margin: var(--space-lg) auto;
+}
+
+.altitude-meter__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fog-light);
+}
+
+.altitude-meter__track {
+  width: 100%;
+  height: 8px;
+  background: var(--fog);
+  position: relative;
+  overflow: hidden;
+}
+
+.altitude-meter__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--fog-light) 0%, var(--platinum) 50%, var(--white) 100%);
+  transition: width 1.5s ease;
+  box-shadow: 0 0 10px var(--platinum-glow);
+}

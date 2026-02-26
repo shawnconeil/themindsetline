@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Results | The Mindset Line</title>
-  <meta name="description" content="Your Mindset Line assessment results. See where you stand.">
+  <meta name="description" content="Your Mindset Line assessment results. Ownership, Accountability, Responsibility — or Blame, Excuses, Denial. See where you operate.">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
@@ -38,14 +38,26 @@
   </div>
 
   <main>
-    <section class="section section--hero container">
+    <section class="section section--hero container" style="position: relative; z-index: 2;">
 
       <!-- Result Display -->
       <div class="result-display fade-in" id="resultDisplay">
         <p class="result-display__label">Your Position</p>
         <h1 class="result-display__identity" id="resultIdentity">—</h1>
         <p class="result-display__description" id="resultDescription">—</p>
-        <div class="the-line" aria-hidden="true"></div>
+
+        <!-- Altitude Meter -->
+        <div class="altitude-meter fade-in fade-in--delay-1">
+          <div class="altitude-meter__labels">
+            <span>Blame &middot; Excuses &middot; Denial</span>
+            <span>Ownership &middot; Accountability &middot; Responsibility</span>
+          </div>
+          <div class="altitude-meter__track">
+            <div class="altitude-meter__fill" id="altitudeMeter" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="the-line" aria-hidden="true" style="margin: var(--space-md) auto;"></div>
         <p class="result-display__score" id="resultScore"></p>
       </div>
 
@@ -56,7 +68,7 @@
         </p>
 
         <form class="form" id="emailForm" action="https://formspree.io/f/xplaceholder" method="POST">
-          <input type="hidden" name="_subject" value="Mindset Line — New Assessment Result">
+          <input type="hidden" name="_subject" value="Mindset Line — Assessment Result">
           <input type="hidden" name="score" id="hiddenScore" value="">
           <input type="hidden" name="identity" id="hiddenIdentity" value="">
 
@@ -81,8 +93,7 @@
 
       <!-- CTA to Book -->
       <div class="fade-in fade-in--delay-3" style="margin-top: var(--space-2xl);">
-        <p style="color: var(--fog-light); font-size: var(--fs-sm); margin: 0 auto var(--space-sm); text-align: center;">Ready to move?</p>
-        <a href="/book.html" class="btn btn--outline">Request a Proposal</a>
+        <a href="/book.html" class="btn btn--outline" id="ctaBtn">Request a Proposal</a>
       </div>
 
     </section>

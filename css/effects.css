@@ -128,6 +128,238 @@
   }
 }
 
+/* ===== HERO STAGE — The Speech ===== */
+.hero-stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nav-height) var(--space-md) var(--space-lg);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  gap: var(--space-xl);
+}
+
+/* The Framework — vertical stack */
+.hero-framework {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ABOVE section */
+.hero-above {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.hero-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-label--above {
+  color: var(--platinum);
+}
+
+.hero-label--below {
+  color: var(--fog-light);
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+}
+
+.hero-words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15em;
+}
+
+.hero-word {
+  font-family: var(--font-accent);
+  line-height: 1.15;
+  display: block;
+}
+
+.hero-word--above {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: var(--white);
+  text-shadow: 0 0 40px rgba(229, 228, 226, 0.15);
+}
+
+.hero-word--below {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: var(--fog-light);
+  opacity: 0.6;
+}
+
+/* THE LINE — hero version with text */
+.the-line--hero {
+  width: 100%;
+  max-width: 600px;
+  margin: var(--space-md) auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background: none;
+  animation: none;
+}
+
+.the-line--hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--platinum);
+  transform: translateY(-50%);
+  box-shadow: 0 0 15px var(--platinum-glow), 0 0 30px rgba(229, 228, 226, 0.3);
+  animation: lineGlow 3s ease-in-out infinite;
+}
+
+.the-line--hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: translateY(-50%);
+  box-shadow: 0 0 60px rgba(229, 228, 226, 0.2);
+  animation: lineGlow 3s ease-in-out infinite 1.5s;
+}
+
+.the-line__text {
+  position: relative;
+  z-index: 1;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--platinum);
+  background: var(--black);
+  padding: 0.5em 1.5em;
+}
+
+/* BELOW section */
+.hero-below {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+/* The Challenge */
+.hero-challenge {
+  max-width: 540px;
+  text-align: center;
+}
+
+.hero-question {
+  font-family: var(--font-accent);
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+  line-height: 1.4;
+}
+
+.hero-subtext {
+  font-size: var(--fs-sm);
+  color: var(--fog-light);
+  letter-spacing: 0.04em;
+}
+
+/* The CTA */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero-cta__sub {
+  font-size: var(--fs-xs);
+  color: var(--fog-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Glowing CTA button */
+.btn--glow {
+  position: relative;
+  box-shadow: 0 0 20px rgba(229, 228, 226, 0.15);
+  animation: btnPulse 2.5s ease-in-out infinite;
+}
+
+.btn--glow:hover {
+  box-shadow: 0 0 30px rgba(229, 228, 226, 0.4), 0 0 60px rgba(229, 228, 226, 0.15);
+  animation: none;
+}
+
+@keyframes btnPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(229, 228, 226, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(229, 228, 226, 0.3), 0 0 50px rgba(229, 228, 226, 0.1);
+  }
+}
+
+/* ===== Staggered Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal--1  { animation-delay: 0.3s; }
+.reveal--2  { animation-delay: 0.6s; }
+.reveal--3  { animation-delay: 0.85s; }
+.reveal--4  { animation-delay: 1.1s; }
+.reveal--5  { animation-delay: 1.6s; }   /* THE LINE — pause before it appears */
+.reveal--6  { animation-delay: 2.1s; }
+.reveal--7  { animation-delay: 2.35s; }
+.reveal--8  { animation-delay: 2.6s; }
+.reveal--9  { animation-delay: 3.2s; }   /* The challenge text */
+.reveal--10 { animation-delay: 3.8s; }   /* The CTA */
+
+/* Below-the-line words fade UP from below (gravity pulling) */
+.hero-word--below.reveal {
+  transform: translateY(-10px);
+  animation-name: revealDown;
+}
+
+.hero-label--below.reveal {
+  transform: translateY(-8px);
+  animation-name: revealDown;
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Subtle background texture */
 .bg-texture {
   position: fixed;

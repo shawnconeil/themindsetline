@@ -41,35 +41,50 @@
   </div>
 
   <main>
-    <section class="section section--hero container">
-      <p class="fade-in" style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.2em; color: var(--fog-light); margin-bottom: var(--space-sm);">The Moment You Choose</p>
+    <section class="hero-stage">
 
-      <h1 class="fade-in fade-in--delay-1">Above or Below.</h1>
+      <!-- ACT 1: The Framework — Stacked vertically like a speech -->
+      <div class="hero-framework">
 
-      <div class="the-line fade-in fade-in--delay-2" aria-hidden="true"></div>
-
-      <div class="fade-in fade-in--delay-2" style="display: flex; justify-content: center; gap: var(--space-2xl); margin-bottom: var(--space-lg); max-width: 600px; width: 100%;">
-        <div style="text-align: center;">
-          <p style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.15em; color: var(--platinum); margin-bottom: var(--space-xs);">Above the Line</p>
-          <p style="font-size: var(--fs-xl); color: var(--white); font-family: var(--font-accent);">Ownership</p>
-          <p style="font-size: var(--fs-xl); color: var(--white); font-family: var(--font-accent);">Accountability</p>
-          <p style="font-size: var(--fs-xl); color: var(--white); font-family: var(--font-accent);">Responsibility</p>
+        <!-- ABOVE THE LINE -->
+        <div class="hero-above">
+          <span class="hero-label hero-label--above reveal reveal--1">Above the Line</span>
+          <div class="hero-words hero-words--above">
+            <span class="hero-word hero-word--above reveal reveal--2">Ownership</span>
+            <span class="hero-word hero-word--above reveal reveal--3">Accountability</span>
+            <span class="hero-word hero-word--above reveal reveal--4">Responsibility</span>
+          </div>
         </div>
-        <div style="text-align: center;">
-          <p style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.15em; color: var(--fog-light); margin-bottom: var(--space-xs);">Below the Line</p>
-          <p style="font-size: var(--fs-xl); color: var(--gray); font-family: var(--font-accent);">Blame</p>
-          <p style="font-size: var(--fs-xl); color: var(--gray); font-family: var(--font-accent);">Excuses</p>
-          <p style="font-size: var(--fs-xl); color: var(--gray); font-family: var(--font-accent);">Denial</p>
+
+        <!-- THE LINE -->
+        <div class="the-line the-line--hero reveal reveal--5" aria-hidden="true">
+          <span class="the-line__text">The Line</span>
         </div>
+
+        <!-- BELOW THE LINE -->
+        <div class="hero-below">
+          <div class="hero-words hero-words--below">
+            <span class="hero-word hero-word--below reveal reveal--6">Blame</span>
+            <span class="hero-word hero-word--below reveal reveal--7">Excuses</span>
+            <span class="hero-word hero-word--below reveal reveal--8">Denial</span>
+          </div>
+          <span class="hero-label hero-label--below reveal reveal--8">Below the Line</span>
+        </div>
+
       </div>
 
-      <p class="fade-in fade-in--delay-3" style="font-size: var(--fs-lg); max-width: 540px; margin: 0 auto var(--space-md); text-align: center;">
-        A voice-led, interactive training that makes accountability visceral&mdash;in under 10 minutes.
-      </p>
-
-      <div class="fade-in fade-in--delay-4" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);">
-        <a href="/experience.html" class="btn btn--above">Begin the Experience</a>
+      <!-- ACT 2: The Challenge -->
+      <div class="hero-challenge reveal reveal--9">
+        <p class="hero-question">Every moment is a choice.</p>
+        <p class="hero-subtext">Which side of the line do you operate from?</p>
       </div>
+
+      <!-- ACT 3: The CTA -->
+      <div class="hero-cta reveal reveal--10">
+        <a href="/experience.html" class="btn btn--above btn--glow">Find Out</a>
+        <p class="hero-cta__sub">5 scenarios. 4 minutes. Total clarity.</p>
+      </div>
+
     </section>
 
     <footer class="footer">

@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --black: #0A0A0A;
+  --platinum: #E5E4E2;
+  --platinum-glow: rgba(229, 228, 226, 0.6);
+  --fog: #2A2A2A;
+  --fog-light: #3A3A3A;
+  --white: #FFFFFF;
+  --gray: #CCCCCC;
+  --btn-below: #3A3A3A;
+  --btn-above: #E5E4E2;
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Crimson Text', Georgia, serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.75rem;
+  --fs-4xl: 3.5rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Layout */
+  --max-width: 1100px;
+  --nav-height: 60px;
+
+  /* Effects */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.8s ease;
+  --transition-fog: 1.2s ease-in-out;
+}

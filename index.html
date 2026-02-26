@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Mindset Line</title>
-  <meta name="description" content="Above the line: Ownership, Accountability, Responsibility. Below the line: Blame, Excuses, Denial. An interactive experience that makes accountability visceral.">
+  <meta name="description" content="The keynote that makes accountability visceral. Above the line: Ownership, Accountability, Responsibility. Below: Blame, Excuses, Denial. Where do you live?">
   <meta property="og:title" content="The Mindset Line">
-  <meta property="og:description" content="Above the line: Ownership, Accountability, Responsibility. Below the line: Blame, Excuses, Denial. Where do you operate?">
+  <meta property="og:description" content="Victors live above the line. Victims live below it. Where do you live?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://themindsetline.com">
   <link rel="stylesheet" href="/css/variables.css">
@@ -14,9 +14,16 @@
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/effects.css">
   <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-  <div class="bg-texture" aria-hidden="true"></div>
+  <!-- Video background -->
+  <div class="hero-video-wrap" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/assets/hero-clip.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/" class="nav__logo">The Mindset Line</a>
@@ -39,50 +46,75 @@
   </div>
 
   <main>
-    <section class="hero-stage">
 
-      <!-- ACT 1: The Framework — Stacked vertically like a speech -->
-      <div class="hero-framework">
+    <!-- HERO: The Confrontation -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
 
-        <!-- ABOVE THE LINE -->
-        <div class="hero-above">
-          <span class="hero-label hero-label--above reveal reveal--1">Above the Line</span>
-          <div class="hero-words hero-words--above">
-            <span class="hero-word hero-word--above reveal reveal--2">Ownership</span>
-            <span class="hero-word hero-word--above reveal reveal--3">Accountability</span>
-            <span class="hero-word hero-word--above reveal reveal--4">Responsibility</span>
+        <!-- The split — clarity vs fog -->
+        <div class="hero__split">
+
+          <div class="hero__side hero__side--above">
+            <span class="hero__tag">Above the Line</span>
+            <span class="hero__identity hero__identity--bright">Victors</span>
+          </div>
+
+          <!-- THE LINE — massive, glowing, impossible to ignore -->
+          <div class="hero__line" aria-hidden="true"></div>
+
+          <div class="hero__side hero__side--below">
+            <span class="hero__identity hero__identity--dim">Victims</span>
+            <span class="hero__tag hero__tag--below">Below the Line</span>
+          </div>
+
+        </div>
+
+        <!-- The confrontation -->
+        <h1 class="hero__question">Where do you live?</h1>
+
+        <!-- CTA -->
+        <a href="/experience.html" class="hero__cta">Watch the Speech</a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: The Stakes -->
+    <section class="stakes" id="stakes">
+      <div class="stakes__inner">
+        <p class="stakes__lead">I can tell a lot about someone &mdash; about their life and their business &mdash; about where they live their life.</p>
+        <div class="stakes__grid">
+          <div class="stakes__col stakes__col--above">
+            <span class="stakes__label">Above</span>
+            <ul class="stakes__list">
+              <li>Ownership</li>
+              <li>Accountability</li>
+              <li>Responsibility</li>
+            </ul>
+          </div>
+          <div class="stakes__divider" aria-hidden="true"></div>
+          <div class="stakes__col stakes__col--below">
+            <span class="stakes__label stakes__label--below">Below</span>
+            <ul class="stakes__list stakes__list--below">
+              <li>Blame</li>
+              <li>Excuses</li>
+              <li>Denial</li>
+            </ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- THE LINE -->
-        <div class="the-line the-line--hero reveal reveal--5" aria-hidden="true">
-          <span class="the-line__text">The Line</span>
+    <!-- SECTION 3: The Proof -->
+    <section class="proof" id="proof">
+      <div class="proof__inner">
+        <blockquote class="proof__quote">
+          This was a mirror that was turned on a blind spot I had in my life. It changed everything.
+        </blockquote>
+        <div class="proof__actions">
+          <a href="/experience.html" class="btn btn--above btn--glow">Experience the Full Speech</a>
+          <a href="/book.html" class="btn btn--below">Bring This to Your Team</a>
         </div>
-
-        <!-- BELOW THE LINE -->
-        <div class="hero-below">
-          <div class="hero-words hero-words--below">
-            <span class="hero-word hero-word--below reveal reveal--6">Blame</span>
-            <span class="hero-word hero-word--below reveal reveal--7">Excuses</span>
-            <span class="hero-word hero-word--below reveal reveal--8">Denial</span>
-          </div>
-          <span class="hero-label hero-label--below reveal reveal--8">Below the Line</span>
-        </div>
-
       </div>
-
-      <!-- ACT 2: The Challenge -->
-      <div class="hero-challenge reveal reveal--9">
-        <p class="hero-question">Every moment is a choice.</p>
-        <p class="hero-subtext">Which side of the line do you operate from?</p>
-      </div>
-
-      <!-- ACT 3: The CTA -->
-      <div class="hero-cta reveal reveal--10">
-        <a href="/experience.html" class="btn btn--above btn--glow">Find Out</a>
-        <p class="hero-cta__sub">10 minutes. Your voice. Total clarity.</p>
-      </div>
-
     </section>
 
     <footer class="footer">
@@ -93,5 +125,6 @@
   </main>
 
   <script type="module" src="/js/nav.js"></script>
+  <script type="module" src="/js/home.js"></script>
 </body>
 </html>

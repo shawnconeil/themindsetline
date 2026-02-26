@@ -1,0 +1,450 @@
+/* ===== THE SPEECH — Scroll-driven visual experience ===== */
+
+.speech {
+  position: relative;
+  z-index: 2;
+}
+
+/* Each section is a full-viewport act */
+.speech__section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-md);
+  position: relative;
+}
+
+.speech__section--opening {
+  padding-top: calc(var(--nav-height) + var(--space-3xl));
+}
+
+.speech__content {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Kicker — small label */
+.speech__kicker {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--fog-light);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* Headings */
+.speech__heading {
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--platinum);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+/* Body text */
+.speech__body {
+  font-size: var(--fs-lg);
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.speech__body--dim {
+  color: var(--fog-light);
+  font-style: italic;
+}
+
+.speech__body--accent {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xl);
+  color: var(--platinum);
+  text-align: center;
+  margin: var(--space-md) 0;
+}
+
+.speech__body--center {
+  text-align: center;
+}
+
+/* Quotes — the speech text */
+.speech__quote {
+  font-family: var(--font-accent);
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  color: var(--gray);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.speech__quote--hero {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--platinum);
+}
+
+.speech__quote--heavy {
+  color: var(--fog-light);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.speech__quote--impact {
+  color: var(--white);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-style: normal;
+  font-weight: var(--fw-medium);
+}
+
+.speech__quote--key {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  color: var(--gray);
+}
+
+.speech__quote--above {
+  color: var(--platinum);
+}
+
+.speech__quote--final {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+
+/* The Litany — below-the-line excuses */
+.speech__litany {
+  text-align: center;
+  margin: var(--space-lg) 0;
+}
+
+.speech__litany p {
+  font-family: var(--font-accent);
+  font-size: var(--fs-lg);
+  color: var(--fog-light);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+  opacity: 0.6;
+}
+
+/* Photo placeholder — will be replaced with real photos */
+.speech__photo-placeholder {
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  margin: var(--space-xl) auto;
+  border: 1px dashed rgba(229, 228, 226, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.speech__photo-placeholder::after {
+  content: attr(data-label);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fog-light);
+  opacity: 0.5;
+}
+
+/* ===== SPLIT / VERSUS LAYOUTS ===== */
+
+/* The Line reveal section */
+.speech__split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+
+.speech__half {
+  padding: var(--space-lg) 0;
+}
+
+.speech__label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.speech__label--above { color: var(--platinum); }
+.speech__label--below { color: var(--fog-light); }
+
+.speech__word {
+  font-family: var(--font-accent);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.speech__word--glow {
+  color: var(--white);
+  text-shadow: 0 0 40px rgba(229, 228, 226, 0.2);
+}
+
+.speech__word--fog {
+  color: var(--fog-light);
+  opacity: 0.5;
+}
+
+.speech__sub {
+  font-size: var(--fs-sm);
+  color: var(--gray);
+  font-style: italic;
+}
+
+/* The Line in speech context */
+.the-line--speech {
+  width: 100%;
+  max-width: 500px;
+}
+
+.the-line--vs {
+  width: 100%;
+  max-width: 400px;
+  margin: var(--space-sm) auto;
+}
+
+/* Versus layout — OAR vs BED for each pair */
+.speech__versus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.speech__vs-above,
+.speech__vs-below {
+  padding: var(--space-lg) 0;
+  max-width: 560px;
+}
+
+.speech__vs-tag {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--platinum);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.speech__vs-tag--below {
+  color: var(--fog-light);
+}
+
+.speech__vs-word {
+  font-family: var(--font-accent);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.speech__vs-word--below {
+  color: var(--fog-light);
+  opacity: 0.6;
+}
+
+.speech__vs-quote {
+  font-family: var(--font-accent);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--gray);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.speech__vs-quote--below {
+  color: var(--fog-light);
+  opacity: 0.7;
+}
+
+/* ===== COLUMNS — Above vs Below lists ===== */
+
+.speech__columns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .speech__columns {
+    flex-direction: row;
+    gap: var(--space-2xl);
+  }
+}
+
+.speech__col {
+  flex: 1;
+}
+
+.speech__col-tag {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--platinum);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.speech__col-tag--below {
+  color: var(--fog-light);
+}
+
+.speech__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.speech__list li {
+  font-family: var(--font-accent);
+  font-size: var(--fs-lg);
+  color: var(--platinum);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(229, 228, 226, 0.06);
+}
+
+.speech__list--below li {
+  color: var(--fog-light);
+  opacity: 0.6;
+  border-bottom-color: rgba(58, 58, 58, 0.3);
+}
+
+.speech__list--feelings li {
+  font-size: var(--fs-xl);
+  padding: 0.3em 0;
+}
+
+/* ===== SECTION THEMES ===== */
+
+.speech__section--dark {
+  background: radial-gradient(ellipse at 50% 50%, rgba(42, 42, 42, 0.4) 0%, transparent 70%);
+}
+
+.speech__section--turn {
+  text-align: center;
+}
+
+.speech__section--power .speech__content {
+  text-align: center;
+}
+
+.speech__section--close {
+  text-align: center;
+}
+
+.speech__section--cta {
+  min-height: 60vh;
+}
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+
+.speech__section .speech__content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.speech__section.visible .speech__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== AUDIO BAR ===== */
+
+.audio-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px var(--space-md);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(229, 228, 226, 0.08);
+}
+
+.audio-bar__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--platinum);
+  background: transparent;
+  color: var(--platinum);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.audio-bar__btn:hover {
+  background: var(--platinum);
+  color: var(--black);
+}
+
+.audio-bar__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.audio-bar__icon--play {
+  margin-left: 2px;
+}
+
+.audio-bar__progress {
+  flex: 1;
+  height: 3px;
+  background: var(--fog);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.audio-bar__fill {
+  height: 100%;
+  background: var(--platinum);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.audio-bar__label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fog-light);
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 640px) {
+  .speech__section {
+    min-height: auto;
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .speech__section--opening {
+    min-height: 100vh;
+  }
+
+  .speech__quote--final {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+
+  .audio-bar__label {
+    display: none;
+  }
+}

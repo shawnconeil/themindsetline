@@ -1,34 +1,36 @@
-const bookForm = document.getElementById('bookForm');
-const bookConfirmation = document.getElementById('bookConfirmation');
+// ===== FORM HANDLER =====
 
-if (bookForm) {
-  bookForm.addEventListener('submit', async (e) => {
+const form = document.getElementById('bookForm');
+const confirmation = document.getElementById('bookConfirmation');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(bookForm);
-    const submitBtn = bookForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
 
     try {
-      const response = await fetch(bookForm.action, {
+      const response = await fetch(form.action, {
         method: 'POST',
-        body: formData,
+        body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
 
       if (response.ok) {
-        bookForm.style.display = 'none';
-        bookConfirmation.classList.add('show');
+        form.style.display = 'none';
+        confirmation.classList.add('show');
       } else {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
+        btn.textContent = 'Error — Try Again';
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = originalText; }, 3000);
       }
     } catch {
-      // If Formspree isn't configured, show confirmation for demo
-      bookForm.style.display = 'none';
-      bookConfirmation.classList.add('show');
+      // If Formspree isn't configured yet, show confirmation for demo
+      form.style.display = 'none';
+      confirmation.classList.add('show');
     }
   });
 }

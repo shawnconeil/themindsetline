@@ -3,124 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Proposal | The Mindset Line</title>
-  <meta name="description" content="Request a keynote, workshop, or team accountability system from The Mindset Line.">
+  <title>Book SCO | The Mindset Line</title>
+  <meta name="description" content="Request a keynote, workshop, or accountability system from Shawn C. O'Neil and The Mindset Line.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/effects.css">
   <link rel="stylesheet" href="/css/components.css">
 </head>
 <body>
-  <div class="bg-texture" aria-hidden="true"></div>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/" class="nav__logo">The Mindset Line</a>
     <ul class="nav__links">
       <li><a href="/">Home</a></li>
-      <li><a href="/experience.html">Experience</a></li>
-      <li><a href="/book.html" class="active">Book</a></li>
+      <li><a href="/book.html" class="active">Book SCO</a></li>
     </ul>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
     <a href="/">Home</a>
-    <a href="/experience.html">Experience</a>
-    <a href="/book.html" class="active">Book</a>
+    <a href="/book.html" class="active">Book SCO</a>
   </div>
 
   <main>
-    <section class="section section--centered container" style="padding-top: calc(var(--nav-height) + var(--space-3xl));">
+    <section class="book">
+      <div class="book__inner">
+        <span class="book__kicker">Let's Talk</span>
+        <h1 class="book__title">Request a Proposal</h1>
+        <p class="book__sub">Keynotes. Workshops. Accountability systems. Tell us what you need.</p>
 
-      <h1 class="fade-in">Request a Proposal</h1>
-      <p class="fade-in fade-in--delay-1" style="margin: var(--space-sm) auto var(--space-2xl); text-align: center; max-width: 480px;">
-        Keynotes. Workshops. Team accountability systems. Tell us what you need.
-      </p>
+        <form class="form" id="bookForm" action="https://formspree.io/f/xplaceholder" method="POST">
+          <input type="hidden" name="_subject" value="The Mindset Line — Proposal Request">
 
-      <form class="form fade-in fade-in--delay-2" id="bookForm" action="https://formspree.io/f/xplaceholder" method="POST">
-        <input type="hidden" name="_subject" value="Mindset Line — Proposal Request">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input" type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email</label>
+              <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
 
-        <div class="form__group">
-          <label class="form__label" for="bookName">Name</label>
-          <input class="form__input" type="text" id="bookName" name="name" required placeholder="Your name">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="company">Company</label>
+              <input class="form__input" type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="role">Your Role</label>
+              <input class="form__input" type="text" id="role" name="role" required autocomplete="organization-title">
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="orgSize">Organization Size</label>
+              <select class="form__select" id="orgSize" name="org_size" required>
+                <option value="" disabled selected>Select</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-200">51-200</option>
+                <option value="201-500">201-500</option>
+                <option value="500+">500+</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="interest">Interest</label>
+              <select class="form__select" id="interest" name="interest" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Keynote">Keynote</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Team System">Team System</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="timeline">Timeline</label>
+            <select class="form__select" id="timeline" name="timeline" required>
+              <option value="" disabled selected>Select timeline</option>
+              <option value="30 days">Next 30 days</option>
+              <option value="60 days">Next 60 days</option>
+              <option value="90 days">Next 90 days</option>
+              <option value="Exploring">Just exploring</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="challenge">Biggest Accountability Challenge <span class="form__optional">(Optional)</span></label>
+            <textarea class="form__textarea" id="challenge" name="challenge"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Request Proposal</button>
+        </form>
+
+        <div class="form__confirmation" id="bookConfirmation">
+          <h3>Received.</h3>
+          <p>We'll be in touch within 24 hours.</p>
         </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookEmail">Email</label>
-          <input class="form__input" type="email" id="bookEmail" name="email" required placeholder="your@email.com">
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookCompany">Company</label>
-          <input class="form__input" type="text" id="bookCompany" name="company" required placeholder="Company name">
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookRole">Role</label>
-          <input class="form__input" type="text" id="bookRole" name="role" required placeholder="Your role">
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookOrgSize">Organization Size</label>
-          <select class="form__select" id="bookOrgSize" name="org_size" required>
-            <option value="" disabled selected>Select size</option>
-            <option value="1-10">1–10 employees</option>
-            <option value="11-50">11–50 employees</option>
-            <option value="51-200">51–200 employees</option>
-            <option value="201-500">201–500 employees</option>
-            <option value="500+">500+ employees</option>
-          </select>
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookInterest">Interest</label>
-          <select class="form__select" id="bookInterest" name="interest" required>
-            <option value="" disabled selected>Select interest</option>
-            <option value="Keynote">Keynote</option>
-            <option value="Workshop">Workshop</option>
-            <option value="Team System">Team System</option>
-          </select>
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookTimeline">Timeline</label>
-          <select class="form__select" id="bookTimeline" name="timeline" required>
-            <option value="" disabled selected>Select timeline</option>
-            <option value="30 days">Next 30 days</option>
-            <option value="60 days">Next 60 days</option>
-            <option value="90 days">Next 90 days</option>
-            <option value="Exploring">Exploring</option>
-          </select>
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="bookChallenge">Biggest Accountability Challenge <span style="opacity: 0.5;">(Optional)</span></label>
-          <textarea class="form__textarea" id="bookChallenge" name="challenge" placeholder="What's holding your team back?"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn--above btn--full" style="margin-top: var(--space-sm);">Request Proposal</button>
-      </form>
-
-      <div class="form__confirmation" id="bookConfirmation">
-        <h3>Thanks!</h3>
-        <p style="margin: var(--space-sm) auto;">We'll be in touch within 24 hours.</p>
       </div>
-
     </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 The Mindset Line. All rights reserved.</p>
-      </div>
-    </footer>
   </main>
 
-  <script type="module" src="/js/nav.js"></script>
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__brand">SCO Consulting</span>
+      <span class="footer__tagline">Personal Brand &amp; Strategic Advisory</span>
+      <p class="footer__copy">&copy; 2026 SCO Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
   <script type="module" src="/js/form.js"></script>
 </body>
 </html>

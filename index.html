@@ -3,128 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mindset Line</title>
-  <meta name="description" content="The keynote that makes accountability visceral. Above the line: Ownership, Accountability, Responsibility. Below: Blame, Excuses, Denial. Where do you live?">
-  <meta property="og:title" content="The Mindset Line">
-  <meta property="og:description" content="Victors live above the line. Victims live below it. Where do you live?">
+  <title>The Mindset Line | Shawn C. O'Neil</title>
+  <meta name="description" content="Above the line: Ownership, Accountability, Responsibility. Below it: Blame, Excuses, Denial. The keynote that makes accountability visceral. By Shawn C. O'Neil.">
+  <meta property="og:title" content="The Mindset Line — Where Do You Live?">
+  <meta property="og:description" content="Victors live above the line. Victims live below it. A keynote by Shawn C. O'Neil.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://themindsetline.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/effects.css">
-  <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/components.css">
 </head>
 <body>
-  <!-- Video background -->
-  <div class="hero-video-wrap" aria-hidden="true">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="/assets/hero-clip.mp4" type="video/mp4">
-    </video>
-    <div class="hero-video-overlay"></div>
-  </div>
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/" class="nav__logo">The Mindset Line</a>
     <ul class="nav__links">
       <li><a href="/" class="active">Home</a></li>
-      <li><a href="/experience.html">Experience</a></li>
-      <li><a href="/book.html">Book</a></li>
+      <li><a href="/book.html">Book SCO</a></li>
     </ul>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
     <a href="/" class="active">Home</a>
-    <a href="/experience.html">Experience</a>
-    <a href="/book.html">Book</a>
+    <a href="/book.html">Book SCO</a>
   </div>
 
   <main>
 
-    <!-- HERO: The Confrontation -->
+    <!-- ========== HERO — The Confrontation ========== -->
     <section class="hero" id="hero">
-      <div class="hero__content">
+      <div class="hero__inner">
+        <span class="hero__kicker">A Keynote by Shawn C. O'Neil</span>
+        <h1 class="hero__title">The Mindset Line</h1>
+        <p class="hero__sub">Victors live above it. Victims live below it.</p>
 
-        <!-- The split — clarity vs fog -->
-        <div class="hero__split">
-
-          <div class="hero__side hero__side--above">
-            <span class="hero__tag">Above the Line</span>
-            <span class="hero__identity hero__identity--bright">Victors</span>
-          </div>
-
-          <!-- THE LINE — massive, glowing, impossible to ignore -->
-          <div class="hero__line" aria-hidden="true"></div>
-
-          <div class="hero__side hero__side--below">
-            <span class="hero__identity hero__identity--dim">Victims</span>
-            <span class="hero__tag hero__tag--below">Below the Line</span>
-          </div>
-
+        <div class="hero__line-wrap" aria-hidden="true">
+          <div class="hero__line"></div>
         </div>
 
-        <!-- The confrontation -->
-        <h1 class="hero__question">Where do you live?</h1>
+        <p class="hero__question">Where do you live?</p>
+        <a href="#framework" class="hero__cta">See the Framework</a>
+      </div>
+    </section>
 
-        <!-- CTA -->
-        <a href="/experience.html" class="hero__cta">Watch the Speech</a>
+
+    <!-- ========== THE FRAMEWORK — Whiteboard Animation ========== -->
+    <section class="framework" id="framework">
+      <div class="framework__inner">
+
+        <!-- ABOVE THE LINE -->
+        <div class="framework__above">
+          <span class="framework__tag framework__tag--above">Above the Line</span>
+          <div class="framework__words">
+            <span class="fw fw--above fw--1">Ownership</span>
+            <span class="fw fw--above fw--2">Accountability</span>
+            <span class="fw fw--above fw--3">Responsibility</span>
+          </div>
+        </div>
+
+        <!-- THE LINE -->
+        <div class="framework__line" aria-hidden="true">
+          <div class="framework__rule"></div>
+          <span class="framework__line-text">The Mindset Line</span>
+        </div>
+
+        <!-- BELOW THE LINE -->
+        <div class="framework__below">
+          <div class="framework__words">
+            <span class="fw fw--below fw--4">Blame</span>
+            <span class="fw fw--below fw--5">Excuses</span>
+            <span class="fw fw--below fw--6">Denial</span>
+          </div>
+          <span class="framework__tag framework__tag--below">Below the Line</span>
+        </div>
 
       </div>
     </section>
 
-    <!-- SECTION 2: The Stakes -->
-    <section class="stakes" id="stakes">
-      <div class="stakes__inner">
-        <p class="stakes__lead">I can tell a lot about someone &mdash; about their life and their business &mdash; about where they live their life.</p>
-        <div class="stakes__grid">
-          <div class="stakes__col stakes__col--above">
-            <span class="stakes__label">Above</span>
-            <ul class="stakes__list">
-              <li>Ownership</li>
-              <li>Accountability</li>
-              <li>Responsibility</li>
-            </ul>
-          </div>
-          <div class="stakes__divider" aria-hidden="true"></div>
-          <div class="stakes__col stakes__col--below">
-            <span class="stakes__label stakes__label--below">Below</span>
-            <ul class="stakes__list stakes__list--below">
-              <li>Blame</li>
-              <li>Excuses</li>
-              <li>Denial</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SECTION 3: The Proof -->
-    <section class="proof" id="proof">
-      <div class="proof__inner">
-        <blockquote class="proof__quote">
+    <!-- ========== THE SPEECH — YouTube Video ========== -->
+    <section class="speech" id="speech">
+      <div class="speech__inner reveal-section">
+        <span class="speech__kicker">The Speech</span>
+        <h2 class="speech__heading">Living Above the Line</h2>
+
+        <div class="video" id="video">
+          <button class="video__btn" id="videoBtn" aria-label="Play video: Living Above the Line by Shawn C. O'Neil">
+            <img class="video__thumb" src="https://i.ytimg.com/vi/NSZgShFpfPA/hqdefault.jpg" alt="Living Above the Line speech thumbnail" width="480" height="360" loading="lazy">
+            <span class="video__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><polygon points="5,3 19,12 5,21"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <blockquote class="speech__quote">
           This was a mirror that was turned on a blind spot I had in my life. It changed everything.
         </blockquote>
-        <div class="proof__actions">
-          <a href="/experience.html" class="btn btn--above btn--glow">Experience the Full Speech</a>
-          <a href="/book.html" class="btn btn--below">Bring This to Your Team</a>
-        </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 The Mindset Line. All rights reserved.</p>
+
+    <!-- ========== THE OFFER — What You Get ========== -->
+    <section class="offer" id="offer">
+      <div class="offer__inner reveal-section">
+        <h2 class="offer__heading">This Isn't Motivation.<br>This Is a Mirror.</h2>
+        <p class="offer__sub">The Mindset Line keynote, workshop, and accountability system. Delivered by the man who lived it.</p>
+
+        <div class="offer__grid">
+          <div class="offer__card">
+            <h3 class="offer__card-title">Keynotes</h3>
+            <p class="offer__card-text">The speech that silences a room. Raw. Real. Delivered live to your team or conference.</p>
+          </div>
+          <div class="offer__card">
+            <h3 class="offer__card-title">Workshops</h3>
+            <p class="offer__card-text">Hands-on sessions where teams confront where they live and build the discipline to stay above the line.</p>
+          </div>
+          <div class="offer__card">
+            <h3 class="offer__card-title">Team Systems</h3>
+            <p class="offer__card-text">Accountability architecture. Weekly protocols. The structure that makes ownership permanent.</p>
+          </div>
+        </div>
+
+        <a href="/book.html" class="btn btn--primary">Bring This to Your Team</a>
       </div>
-    </footer>
+    </section>
+
+
+    <!-- ========== THE SPEAKER — Shawn C. O'Neil ========== -->
+    <section class="speaker" id="speaker">
+      <div class="speaker__inner reveal-section">
+        <span class="speaker__kicker">The Speaker</span>
+        <h2 class="speaker__name">Shawn C. O'Neil</h2>
+        <p class="speaker__title">The Architect of Disciplined Execution</p>
+        <p class="speaker__bio">
+          Combat veteran. USMC &amp; Army. CEO of Black Haus Capital. Founder of the Fortitude Ecosystem.
+          From homeless and suicidal to building companies and commanding rooms.
+          1,920+ consecutive days of training. The line changed everything.
+        </p>
+        <a href="/book.html" class="btn btn--outline">Request a Proposal</a>
+      </div>
+    </section>
+
   </main>
 
-  <script type="module" src="/js/nav.js"></script>
-  <script type="module" src="/js/home.js"></script>
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__brand">SCO Consulting</span>
+      <span class="footer__tagline">Personal Brand &amp; Strategic Advisory</span>
+      <p class="footer__copy">&copy; 2026 SCO Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

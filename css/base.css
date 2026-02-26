@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+/* Fonts loaded via <link> in HTML head for performance */
 
 *, *::before, *::after {
   margin: 0;
@@ -27,22 +27,13 @@ body {
 h1, h2, h3 {
   font-family: var(--font-accent);
   font-weight: var(--fw-semibold);
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.02em;
-}
-
-h1 { font-size: var(--fs-3xl); }
-h2 { font-size: var(--fs-2xl); }
-h3 { font-size: var(--fs-xl); }
-
-@media (min-width: 768px) {
-  h1 { font-size: var(--fs-4xl); }
-  h2 { font-size: var(--fs-3xl); }
-  h3 { font-size: var(--fs-2xl); }
+  color: var(--white);
 }
 
 p {
-  color: var(--gray);
+  color: var(--silver);
   max-width: 600px;
 }
 
@@ -52,14 +43,9 @@ a {
   transition: opacity var(--transition-fast);
 }
 
-a:hover {
-  opacity: 0.8;
-}
+a:hover { opacity: 0.85; }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img { max-width: 100%; display: block; }
 
 ::selection {
   background: var(--platinum);
